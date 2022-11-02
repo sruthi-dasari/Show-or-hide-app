@@ -5,11 +5,23 @@ class ShowHide extends Component {
   state = {isFnameHidden: true, isLnameHidden: true}
 
   onShowHideFname = () => {
-    this.setState({isFnameHidden: false})
+    const {isFnameHidden} = this.state
+
+    if (isFnameHidden === true) {
+      this.setState({isFnameHidden: false})
+    } else {
+      this.setState({isFnameHidden: true})
+    }
   }
 
   onShowHideLname = () => {
-    this.setState({isLnameHidden: false})
+    const {isLnameHidden} = this.state
+
+    if (isLnameHidden === true) {
+      this.setState({isLnameHidden: false})
+    } else {
+      this.setState({isLnameHidden: true})
+    }
   }
 
   render() {
